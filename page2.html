@@ -14,19 +14,34 @@
       background-color: #f8f9fa;
       padding: 20px;
     }
+
     #searchInput {
       margin-bottom: 20px;
     }
-    /* Adjust the third column width in the table */
-    table th:nth-child(1),
-    table td:nth-child(1) {
-      width: 250px; /* Adjust as needed */
-      word-wrap: break-word;
+
+    /* Make the table fully responsive */
+    .table-responsive {
+      overflow-x: auto;
+      white-space: nowrap;
     }
+
     table {
+      width: 100%;
+      table-layout: fixed; /* Ensures consistent column sizing */
       font-size: 0.9rem;
     }
-  </style>
+
+    th, td {
+      word-wrap: break-word;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Adjust column widths */
+    th:nth-child(1), td:nth-child(1) { width: 35%; } /* Adjust as needed */
+    th:nth-child(2), td:nth-child(2) { width: 15%; }
+    th:nth-child(3), td:nth-child(3) { width: 50%; }
+</style>
 </head>
 <body>
   <div class="container">
