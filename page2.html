@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Area Information</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+    #searchInput {
+      margin-bottom: 20px;
+    }
+    /* Optional: Make the table font smaller if there are many columns/rows */
+    table {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Image at the Top -->
+    <img src="https://via.placeholder.com/800x200?text=Your+Image+Here" class="img-fluid mb-3" alt="Area Information Banner">
+    
+    <!-- Search Bar -->
+    <input type="text" id="searchInput" class="form-control" placeholder="Search for area information...">
+    
+    <!-- Table with Area Information -->
+    <div class="table-responsive my-3">
+      <table class="table table-striped" id="areaTable">
+        <thead>
+          <tr>
+            <th>AREA/FEATURE</th>
+            <th>Hall</th>
+            <th>LOCATION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI Tour Desk</td>
+            <td>5</td>
+            <td>North of Hall, next to Info Desk</td>
+          </tr>
+          <tr>
+            <td>Announcement Stage 1 /Private</td>
+            <td>3</td>
+            <td>The middle-west side of Hall 3</td>
+          </tr>
+          <tr>
+            <td>Announcement Stage 2 /Gov</td>
+            <td>4</td>
+            <td>middle-west side of Hall 4</td>
+          </tr>
+          <tr>
+            <td>Boxing Arena (Golden Glove)</td>
+            <td>3</td>
+            <td>South end, opposite to F&amp;B Area</td>
+          </tr>
+          <tr>
+            <td>Careem/Taxi Point</td>
+            <td>Outdoor</td>
+            <td>CP2 Parking - Opp Hall 1 Majlis exit (past VIP Parking Zone)</td>
+          </tr>
+          <tr>
+            <td>Code Stage</td>
+            <td>1A</td>
+            <td>Northwest corner of hall 1A</td>
+          </tr>
+          <tr>
+            <td>Country Pavilions</td>
+            <td>3</td>
+            <td>North end of Hall 3A</td>
+          </tr>
+          <tr>
+            <td>Coworking Stations</td>
+            <td>6</td>
+            <td>West of Hall 6, Opposite the Orbital Stage 4</td>
+          </tr>
+          <tr>
+            <td>DeepFest Lounge</td>
+            <td>5</td>
+            <td>Northwest corner (next to tunnel entrance)</td>
+          </tr>
+          <tr>
+            <td>DeepFest Main Stage</td>
+            <td>5</td>
+            <td>Northeast corner</td>
+          </tr>
+          <tr>
+            <td>DeepMedia Stage</td>
+            <td>5</td>
+            <td>Southwest corner</td>
+          </tr>
+          <tr>
+            <td>DGA Stage</td>
+            <td>2</td>
+            <td>Southeast of Hall 2, opposite to info desk</td>
+          </tr>
+          <tr>
+            <td>Ecosystem Exchange</td>
+            <td>1A</td>
+            <td>Southeast corner of hall 1A, NERA TO investor lounge</td>
+          </tr>
+          <tr>
+            <td>Ericsson Stage/Theatre</td>
+            <td>1A</td>
+            <td>SouthEastsection, H1.H30</td>
+          </tr>
+          <tr>
+            <td>F&amp;B Area</td>
+            <td>1A</td>
+            <td>Northeast corner, Close to Startup stage</td>
+          </tr>
+          <tr>
+            <td>F&amp;B Area</td>
+            <td>4</td>
+            <td>Northeast of Hall 4</td>
+          </tr>
+          <tr>
+            <td>F&amp;B Area</td>
+            <td>3</td>
+            <td>The middle-west section, near to Premium Lounge</td>
+          </tr>
+          <tr>
+            <td>F&amp;B Area X2</td>
+            <td>3</td>
+            <td>Northwest of the Hall, near to LEAP Lounge</td>
+          </tr>
+          <tr>
+            <td>F&amp;B Areas x2</td>
+            <td>5</td>
+            <td>Next Town Square SouthEastcorner</td>
+          </tr>
+          <tr>
+            <td>F&amp;B Areas x2</td>
+            <td>6</td>
+            <td>South of Hall 6</td>
+          </tr>
+          <tr>
+            <td>Fine Dining Restaurant</td>
+            <td>2</td>
+            <td>End of Hall 2, upstairs, near to leap lounge</td>
+          </tr>
+          <tr>
+            <td>Food Area</td>
+            <td>2</td>
+            <td>Corner of Hall 2, in front to Orbital stage 2</td>
+          </tr>
+          <tr>
+            <td>Food Festival</td>
+            <td>Outdoor</td>
+            <td>Central courtyard</td>
+          </tr>
+          <tr>
+            <td>Food Truck X2</td>
+            <td>2</td>
+            <td>Hall 2 corner, near the Premium Lounge</td>
+          </tr>
+          <tr>
+            <td>Food Truck X2</td>
+            <td>2</td>
+            <td>West Corner, near the info desk</td>
+          </tr>
+          <tr>
+            <td>Food Truck X3</td>
+            <td>2</td>
+            <td>Close to leap lounge</td>
+          </tr>
+          <tr>
+            <td>Food Truck X3</td>
+            <td>Outdoor</td>
+            <td>Outdoor the Registration area of Hall 2</td>
+          </tr>
+          <tr>
+            <td>GES office</td>
+            <td>2</td>
+            <td>Behind the registration area.</td>
+          </tr>
+          <tr>
+            <td>Google Amphitheatre</td>
+            <td>1A</td>
+            <td>SouthEastsection, H1.J10</td>
+          </tr>
+          <tr>
+            <td>Gov Tour Desk</td>
+            <td>2</td>
+            <td>South of the Hall, Opposite to Premium lounge</td>
+          </tr>
+          <tr>
+            <td>Green Room - DeepFest</td>
+            <td>5</td>
+            <td>Behind DeepFest Main Stage</td>
+          </tr>
+          <tr>
+            <td>Green Room - LEAP</td>
+            <td>1</td>
+            <td>Behind leap main stage - North end of West wing</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>1</td>
+            <td>Infront Majlis (Internal)</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>1</td>
+            <td>Corner of East &amp; South wing, near SDAIA and Oracle East.</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>1A</td>
+            <td>Middle of the Hall, near to Ecosystem Partners</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>1A</td>
+            <td>North of the Hall, near to NTDP</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>2</td>
+            <td>West Corner, close to Orbital stage 2</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>2</td>
+            <td>Southwest Hall 2, Near to HRSD.</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>2</td>
+            <td>West corner, near to TATWEER</td>
+          </tr>
+          <tr>
+            <td>Info desk</td>
+            <td>3</td>
+            <td>Northeast, close to Seating Area</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>3</td>
+            <td>South- middle of the Hall, near to Tech tour 3</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>4</td>
+            <td>North of Hall 4, near to F&amp;B</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>5</td>
+            <td>Next to Town Square - SouthEastcorner</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>5</td>
+            <td>North of Hall, between entrance doors</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>6</td>
+            <td>Southwest of Hall 6, near to F&amp;B</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>6</td>
+            <td>North of Hall 6</td>
+          </tr>
+          <tr>
+            <td>Info Desk</td>
+            <td>3</td>
+            <td>The middle-east section of Hall 3</td>
+          </tr>
+          <tr>
+            <td>Info Hub</td>
+            <td>2</td>
+            <td>Registration area</td>
+          </tr>
+          <tr>
+            <td>Informatica Stage/Theatre</td>
+            <td>5</td>
+            <td>Close to DeepFest Main Stage, H5.H70</td>
+          </tr>
+          <tr>
+            <td>Investor Lounge</td>
+            <td>1A</td>
+            <td>Southeast corner</td>
+          </tr>
+          <tr>
+            <td>Investor Stage</td>
+            <td>1A</td>
+            <td>Southwest corner</td>
+          </tr>
+          <tr>
+            <td>Investor Tour desk</td>
+            <td>1A</td>
+            <td>outh-mid section of Hall 1A</td>
+          </tr>
+          <tr>
+            <td>Leaders / Investors / Speakers - Badge Counter</td>
+            <td>1</td>
+            <td>Infront Majlis (Internal)</td>
+          </tr>
+          <tr>
+            <td>LEAP Lounge</td>
+            <td>2</td>
+            <td>Close to Fine Dining Restaurant</td>
+          </tr>
+          <tr>
+            <td>LEAP Lounge</td>
+            <td>3</td>
+            <td>West corner</td>
+          </tr>
+          <tr>
+            <td>LEAP Lounge</td>
+            <td>3</td>
+            <td>West side, opposite premium lounge</td>
+          </tr>
+          <tr>
+            <td>Leap Main Stage</td>
+            <td>1</td>
+            <td>North end of West wing</td>
+          </tr>
+          <tr>
+            <td>Leap Speakers Lounge</td>
+            <td>1</td>
+            <td>Infront of Mainstage (North end of West wing)</td>
+          </tr>
+          <tr>
+            <td>Lost and Found Desk</td>
+            <td>2</td>
+            <td>Behind the registration area (Info Hub)</td>
+          </tr>
+          <tr>
+            <td>Lounge/Seating Area (Public)</td>
+            <td>6</td>
+            <td>Middle of Hall 6, close to Orbital Stage 4</td>
+          </tr>
+          <tr>
+            <td>Main Registration</td>
+            <td>2</td>
+            <td>Hall 2 main entrance</td>
+          </tr>
+          <tr>
+            <td>Majlis Hall 2 - HEM Majlis</td>
+            <td>2</td>
+            <td>Mezzanine Level (Up Escalator)</td>
+          </tr>
+          <tr>
+            <td>Matchmaking &amp; Mentor Zone</td>
+            <td>1A</td>
+            <td>Southeast corner, close to Ecosystem Exchange</td>
+          </tr>
+          <tr>
+            <td>Media Lounge</td>
+            <td>2</td>
+            <td>Hall 2 dogleg, next to Orbital Stage 2</td>
+          </tr>
+          <tr>
+            <td>Merchandise Village &amp; Stage</td>
+            <td>2</td>
+            <td>Hall 2 dogleg, near the Premium Lounge</td>
+          </tr>
+          <tr>
+            <td>Networking /Seating Area</td>
+            <td>5</td>
+            <td>Southwest corner, next to DeepMedia Stage</td>
+          </tr>
+          <tr>
+            <td>Networking area</td>
+            <td>3</td>
+            <td>Hall 3 west side, near to LEAP lounge</td>
+          </tr>
+          <tr>
+            <td>Orbital Stage 1 (Edutech/4IR/Cleantech/Retail)</td>
+            <td>4</td>
+            <td>Southwest Corner of Hall 4.</td>
+          </tr>
+          <tr>
+            <td>Orbital Stage 2 (Space &amp; Sports Tech)</td>
+            <td>2</td>
+            <td>Dogleg of Hall 2, close to Media Lounge.</td>
+          </tr>
+          <tr>
+            <td>Orbital Stage 3 (Smart Cities &amp; Cloud Tech)</td>
+            <td>3</td>
+            <td>Southwest corner.</td>
+          </tr>
+          <tr>
+            <td>Orbital Stage 4 (Health tech &amp; Fintech)</td>
+            <td>6</td>
+            <td>East of Hall 6, Opposite the Coworking Stations</td>
+          </tr>
+          <tr>
+            <td>Orbital Stage 5 (Gaming &amp; Creative Economy)</td>
+            <td>2</td>
+            <td>End of Hall 2, near to LEAP Lounge</td>
+          </tr>
+          <tr>
+            <td>Organizers' Office</td>
+            <td>2</td>
+            <td>Near the Hall 2 reg area</td>
+          </tr>
+          <tr>
+            <td>Paramedic station</td>
+            <td>1</td>
+            <td>Corner of SouthEast wing, near SDAIA and Oracle East.</td>
+          </tr>
+          <tr>
+            <td>Paramedic station</td>
+            <td>1A</td>
+            <td>Middle of the Hall, near to info desk and Ecosystem Partners</td>
+          </tr>
+          <tr>
+            <td>Paramedic station</td>
+            <td>2</td>
+            <td>West Corner, close to Orbital stage 2 and info desk</td>
+          </tr>
+          <tr>
+            <td>Paramedic station</td>
+            <td>3</td>
+            <td>East side entrance near activation space section of Hall 3</td>
+          </tr>
+          <tr>
+            <td>Paramedic station</td>
+            <td>4</td>
+            <td>North of Hall 4, near to F&amp;B.</td>
+          </tr>
+          <tr>
+            <td>Paramedic station</td>
+            <td>5</td>
+            <td>Next to Town Square - SouthEastcorner</td>
+          </tr>
+          <tr>
+            <td>Paramedic station</td>
+            <td>6</td>
+            <td>Southwest of Hall 6, near to F&amp;B.</td>
+          </tr>
+          <tr>
+            <td>Pick up- Drop off /Gala Dinner</td>
+            <td>Outdoor</td>
+            <td>TBC</td>
+          </tr>
+          <tr>
+            <td>Pick up- Drop off /Staff</td>
+            <td>Outdoor</td>
+            <td>Hall2, gate 6</td>
+          </tr>
+          <tr>
+            <td>Pink Gorilla</td>
+            <td>5</td>
+            <td>In Town Square SouthEastcorner</td>
+          </tr>
+          <tr>
+            <td>Prayer Rooms</td>
+            <td>1</td>
+            <td>North end of West wing, Opposite to LEAP Speakers Lounge</td>
+          </tr>
+          <tr>
+            <td>Prayer Rooms - Outdoor</td>
+            <td>2</td>
+            <td>Outdoor area between Hall 6 and Hall 2</td>
+          </tr>
+          <tr>
+            <td>Premium Lounge</td>
+            <td>2</td>
+            <td>south of the Hall, behind the registration area</td>
+          </tr>
+          <tr>
+            <td>Premium Lounge</td>
+            <td>2</td>
+            <td>Hall 2 dogleg near to Merch Village</td>
+          </tr>
+          <tr>
+            <td>Premium lounge</td>
+            <td>3</td>
+            <td>West side, opposite LEAP lounge</td>
+          </tr>
+          <tr>
+            <td>Premium Lounge</td>
+            <td>4</td>
+            <td>Northeast of Hall 4, neat to near to F&amp;B</td>
+          </tr>
+          <tr>
+            <td>Premium Toilet F</td>
+            <td>Outdoor</td>
+            <td>Outside Hall 1, Near to ELM</td>
+          </tr>
+          <tr>
+            <td>Premium Toilet M</td>
+            <td>Outdoor</td>
+            <td>Outside Hall 1, Near to Dell</td>
+          </tr>
+          <tr>
+            <td>Premium Toilet M/F</td>
+            <td>1</td>
+            <td>North end of West wing, Opposite to LEAP Speakers Lounge</td>
+          </tr>
+          <tr>
+            <td>Premium Toilet M/F</td>
+            <td>Outdoor</td>
+            <td>Hall1, Behind LEAP Main Stage</td>
+          </tr>
+          <tr>
+            <td>Premium Toilet M/F</td>
+            <td>1</td>
+            <td>Hall1, Close to MAJLIS</td>
+          </tr>
+          <tr>
+            <td>Premium Toilet M/F</td>
+            <td>Outdoor</td>
+            <td>Outdoor area between Hall 1 and Hall 4</td>
+          </tr>
+          <tr>
+            <td>Premium Toilets</td>
+            <td>2</td>
+            <td>Outdoor area between Hall 6 and Hall 2</td>
+          </tr>
+          <tr>
+            <td>Premium Toilets</td>
+            <td>2</td>
+            <td>Hall 2 East, behind the registration area</td>
+          </tr>
+          <tr>
+            <td>Premium Toilets</td>
+            <td>2</td>
+            <td>Hall 2 dogleg near to Merch Village</td>
+          </tr>
+          <tr>
+            <td>Premium Toilets</td>
+            <td>Outdoor</td>
+            <td>Outside Hall 2</td>
+          </tr>
+          <tr>
+            <td>Premium Toilets</td>
+            <td>Outdoor</td>
+            <td>Outside Hall 2</td>
+          </tr>
+          <tr>
+            <td>premium toilet</td>
+            <td>6</td>
+            <td>between hall 1A and hall 6</td>
+          </tr>
+          <tr>
+            <td>PWC Theatre</td>
+            <td>2</td>
+            <td>Near tech Tour desk 2, H2.H20</td>
+          </tr>
+          <tr>
+            <td>Registration Tent 1</td>
+            <td>Outdoor</td>
+            <td>CP1 -Parking</td>
+          </tr>
+          <tr>
+            <td>Registration Tent 2</td>
+            <td>Outdoor</td>
+            <td>CP2 -Parking</td>
+          </tr>
+          <tr>
+            <td>Sartup Stage</td>
+            <td>1A</td>
+            <td>Northeast corner</td>
+          </tr>
+          <tr>
+            <td>Schneider Electric Stage/Theatre</td>
+            <td>1A</td>
+            <td>Northwest H1.K68</td>
+          </tr>
+          <tr>
+            <td>Seating Area</td>
+            <td>2</td>
+            <td>Hall 2 corner, near to Merch Village</td>
+          </tr>
+          <tr>
+            <td>Seating Area</td>
+            <td>3</td>
+            <td>North of the Hall, near to SDB and Info desk</td>
+          </tr>
+          <tr>
+            <td>Self-registration</td>
+            <td>2</td>
+            <td>Registration area</td>
+          </tr>
+          <tr>
+            <td>Shuttle Bus Point</td>
+            <td>Outdoor</td>
+            <td>Near Hall 2 entrance (runway side)</td>
+          </tr>
+          <tr>
+            <td>Speakers help Desk</td>
+            <td>2</td>
+            <td>Registration area</td>
+          </tr>
+          <tr>
+            <td>Speakers Lounge</td>
+            <td>5</td>
+            <td>East side, next to DeepFest Main Stage</td>
+          </tr>
+          <tr>
+            <td>Speakers Waiting Room</td>
+            <td>2</td>
+            <td>Near main entrance/exit next to GES office</td>
+          </tr>
+          <tr>
+            <td>Tech Arena</td>
+            <td>2</td>
+            <td>Middle Hall 2 - opposite Zaintech, next to Barq/Nournet</td>
+          </tr>
+          <tr>
+            <td>Tech Tour 1 Desk</td>
+            <td>1</td>
+            <td>Northeast of Hall1, Near to NHC</td>
+          </tr>
+          <tr>
+            <td>Tech Tour 2 Desk</td>
+            <td>2</td>
+            <td>South Hall 2, Near to PWC</td>
+          </tr>
+          <tr>
+            <td>Tech Tour 3 Desk</td>
+            <td>3</td>
+            <td>South-middle of the Hall, Near tunnel entrance 4</td>
+          </tr>
+          <tr>
+            <td>Tech Tour Desk</td>
+            <td>1</td>
+            <td>Hall1, Close to MAJLIS</td>
+          </tr>
+          <tr>
+            <td>Toilet F</td>
+            <td>1</td>
+            <td>South of Hall 1, Near to Mobily</td>
+          </tr>
+          <tr>
+            <td>Toilet F</td>
+            <td>Outdoor</td>
+            <td>Outside Hall 1, Near to Dell</td>
+          </tr>
+          <tr>
+            <td>Toilet F/M</td>
+            <td>1</td>
+            <td>Northwest Hall1, Near to 2P perfect presentation</td>
+          </tr>
+          <tr>
+            <td>Toilet F/M</td>
+            <td>1</td>
+            <td>Northwest Hall 1, Opposite to Tech tour 1</td>
+          </tr>
+          <tr>
+            <td>Toilet M</td>
+            <td>1</td>
+            <td>South of Hall 1, Near to Microsoft</td>
+          </tr>
+          <tr>
+            <td>Toilet M</td>
+            <td>Outdoor</td>
+            <td>Outside Hall 1, Near to ELM</td>
+          </tr>
+          <tr>
+            <td>Toilet M/F</td>
+            <td>1</td>
+            <td>SouthWest corner, Near to Aramco</td>
+          </tr>
+          <tr>
+            <td>Toilet M/F</td>
+            <td>1</td>
+            <td>SouthEast corner, Near to Google Cloud</td>
+          </tr>
+          <tr>
+            <td>Toilets M/F</td>
+            <td>2</td>
+            <td>South of Hall, opposite to Premium lounge</td>
+          </tr>
+          <tr>
+            <td>Toilets M/F</td>
+            <td>2</td>
+            <td>Southeast of Hall 2, near to DGA Stage</td>
+          </tr>
+          <tr>
+            <td>Toilets M/F</td>
+            <td>2</td>
+            <td>Southwest of Hall 2, opposite to Tech Arena</td>
+          </tr>
+          <tr>
+            <td>Toilets M/F</td>
+            <td>2</td>
+            <td>Hall 2 Corner, close to Orbital Stage 2</td>
+          </tr>
+          <tr>
+            <td>Toilets M/F</td>
+            <td>2</td>
+            <td>End of Hall 2, close to Fine Dining Restaurant</td>
+          </tr>
+          <tr>
+            <td>Toilets M/F</td>
+            <td>2</td>
+            <td>End of Hall 2, close to Orbital Stage 5</td>
+          </tr>
+          <tr>
+            <td>Toilets M/F</td>
+            <td>Outdoor</td>
+            <td>Outside Hall 3A</td>
+          </tr>
+          <tr>
+            <td>Transportation desk</td>
+            <td>2</td>
+            <td>Opposite Main Registration area (Near Exit doors)</td>
+          </tr>
+          <tr>
+            <td>VIP Registration</td>
+            <td>1</td>
+            <td>Infront of Majlis - Hall 1 - SouthWest corner</td>
+          </tr>
+          <tr>
+            <td>VIP/ Majlis Hall 1</td>
+            <td>1</td>
+            <td>Hall 1 - SouthWest corner</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Navigation Back to the Main Page -->
+    <div class="text-center my-4">
+      <a href="index.html" class="btn btn-secondary">Back to Team Quick Access</a>
+    </div>
+  </div>
+  
+  <!-- Bootstrap 5 Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- JavaScript for the Search Functionality -->
+  <script>
+    document.getElementById('searchInput').addEventListener('keyup', function() {
+      var filter = this.value.toUpperCase();
+      var rows = document.querySelector("#areaTable tbody").rows;
+      for (var i = 0; i < rows.length; i++) {
+        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+        var thirdCol = rows[i].cells[2].textContent.toUpperCase();
+        if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1 || thirdCol.indexOf(filter) > -1) {
+          rows[i].style.display = "";
+        } else {
+          rows[i].style.display = "none";
+        }
+      }
+    });
+  </script>
+</body>
+</html>
