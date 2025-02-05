@@ -27,20 +27,20 @@
 
     table {
       width: 100%;
-      table-layout: fixed; /* Ensures consistent column sizing */
+      table-layout: auto; /* Allows dynamic column sizing */
       font-size: 0.9rem;
     }
 
     th, td {
+      white-space: normal; /* Allow text wrapping */
       word-wrap: break-word;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      overflow: visible; /* Prevent text truncation */
     }
 
     /* Adjust column widths */
-    th:nth-child(1), td:nth-child(1) { width: 35%; } /* Adjust as needed */
+    th:nth-child(1), td:nth-child(1) { width: 30%; } /* Adjust as needed */
     th:nth-child(2), td:nth-child(2) { width: 15%; }
-    th:nth-child(3), td:nth-child(3) { width: 50%; }
+    th:nth-child(3), td:nth-child(3) { width: 55%; }
 </style>
 </head>
 <body>
